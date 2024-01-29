@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and User Details Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .alert {
+      display: none;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+      background-color: #4caf50;
+      color: #fff;
+    }
+    .containercert {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #imageDisplay {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    #imageSelector {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" id="loginContainer">
+  <h2>Login</h2>
+  <!-- Add your login form here -->
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+  <a href="#" class="btn" onclick="showCertificatePage()">Next</a>
+</div>
+
+<div class="containercert hidden" id="certificateContainer">
+    <h2>Select Certificate</h2>
+  
+    <div>
+      <label for="imageSelector">Select Certificate:</label>
+      <select id="imageSelector" onchange="displaySelectedImage()">
+        <option value="image1">----- Select Certificate -----</option>
+        <option value="image1">Appreciation Certificate</option>
+        <option value="image2">Awarded Certificate</option>
+        <option value="image3">Employee of the Month</option>
+        <option value="image4">Internship Certificate</option>
+        <option value="image5">Training Certificate</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+  
+    <img id="imageDisplay" src="" alt="Selected Image">
+    <a href="#" class="btn" onclick="showUserDetailsForm()">Next</a>
+</div>
+
+<div class="container hidden" id="userDetailsContainer">
+  <h2>User Details</h2>
+  <!-- Add your user details form here -->
+  <label for="fullname">Full Name:</label>
+  <input type="text" id="fullname" name="fullname" required>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <a href="#" class="btn" onclick="showSuccessAlert()">Next</a>
+</div>
+
+<div class="alert" id="successAlert">
+  Successfully done!
+</div>
+
+<script>
+  function showCertificatePage() {
+    document.getElementById('loginContainer').classList.add('hidden');
+    document.getElementById('certificateContainer').classList.remove('hidden');
+  }
+
+  function showUserDetailsForm() {
+    document.getElementById('certificateContainer').classList.add('hidden');
+    document.getElementById('userDetailsContainer').classList.remove('hidden');
+  }
+
+  function showSuccessAlert() {
+    document.getElementById('userDetailsContainer').classList.add('hidden');
+    document.getElementById('successAlert').style.display = 'block';
+  }
+
+  // certificate select function
+  function displaySelectedImage() {
+    // Get the selected value from the dropdown
+    const selectedValue = document.getElementById('imageSelector').value;
+
+    // Get the image element
+    const imageDisplay = document.getElementById('imageDisplay');
+
+    // Set the source of the image based on the selected value
+    switch (selectedValue) {
+      case 'image1':
+        imageDisplay.src = 'cert/apres.jpg';
+        break;
+      case 'image2':
+        imageDisplay.src = 'cert/award.jpg';
+        break;
+      case 'image3':
+        imageDisplay.src = 'cert/eom.jpg';
+        break;
+      case 'image4':
+        imageDisplay.src = 'cert/intrn.png';
+        break;
+      case 'image5':
+        imageDisplay.src = 'cert/trn.png';
+        break;
+      // Add more cases for additional options
+      default:
+        imageDisplay.src = ''; // Empty source if none selected
+    }
+    
+  }
+</script>
+
+</body>
+</html>

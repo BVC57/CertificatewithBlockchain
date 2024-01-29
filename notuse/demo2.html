@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./main.css" />
+  <title>Mobile Header Menu</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+  </style>
+</head>
+<body>
+  <header>
+    <div class="mainlogo"><img src="./cert//logo1.png" alt="" /></div>
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content" id="maincontent">
+    <div class="screen-1">
+      <div class="logo">
+        <img src="./cert/logo1.png" alt="not found" />
+      </div>
+      <div class="email">
+        <label for="email">Issuer Name</label>
+        <div class="sec-2">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="email" name="email" placeholder="Issuer Name" />
+        </div>
+      </div>
+      <div class="password">
+        <label for="password">Issue PublicKey</label>
+        <div class="sec-2">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input
+            class="pas"
+            type="password"
+            name="password"
+            placeholder="**********" />
+          <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+        </div>
+      </div>
+      <button class="login" id="loginform" onclick="showCertificatePage()">
+        Login
+      </button>
+    </div>
+
+    <div class="slider-container">
+      <div class="slider">
+        <!-- First Set of Cards -->
+        <div class="card">
+          <div class="shead">Select certificate</div>
+          <label for="image1" id="lbl1">
+            <input
+              type="radio"
+              id="image1"
+              name="image-choice-1"
+              class="image-radio" />
+            <img src="./cert/apres.jpg" alt="Thumbnail 1" class="view-image"/>
+          </label>
+          <div class="card-form">
+            <!-- Your form elements go here -->
+            <input
+              type="text"
+              name="inputField"
+              class="uname"
+              placeholder="Enter User Name" />
+            <input
+              type="text"
+              name="inputField"
+              class="uemail"
+              placeholder="Enter User Email" /><br />
+            <label for="date">Select Issue Date</label><br />
+            <input
+              type="date"
+              name="inputField"
+              class="idate"
+              placeholder="Select Date" />
+            <br />
+            <button type="button" class="submitBtn" data-form="form1">Preview</button>
+          </div>
+        </div>
+
+        <!-- Second Set of Cards -->
+        <div class="card">
+          <div class="shead">Select certificate</div>
+          <label for="image1" id="lbl2">
+            <input
+              type="radio"
+              id="image1"
+              name="image-choice-1"
+              class="image-radio" />
+            <img src="./cert/award.jpg" alt="Thumbnail 1" class="view-image"/>
+          </label>
+          <div class="card-form">
+            <!-- Your form elements go here -->
+            <input
+              type="text"
+              name="inputField"
+              class="uname"
+              placeholder="Enter User Name" />
+            <input
+              type="text"
+              name="inputField"
+              class="uemail"
+              placeholder="Enter User Email" /><br />
+            <label for="date">Select Issue Date</label><br />
+            <input
+              type="date"
+              name="inputField"
+              class="idate"
+              placeholder="Select Date" />
+            <br />
+            <button type="button" class="submitBtn" data-form="form1">Preview</button>
+          </div>
+        </div>
+
+        <!-- Third Set of Cards -->
+        <div class="card">
+          <div class="shead">Select certificate</div>
+          <label for="image1" id="lbl3">
+            <input
+              type="radio"
+              id="image1"
+              name="image-choice-1"
+              class="image-radio" />
+            <img src="./cert/eom.jpg" alt="Thumbnail 1" class="view-image"/>
+          </label>
+          <div class="card-form">
+            <!-- Your form elements go here -->
+            <input
+              type="text"
+              name="inputField"
+              class="uname"
+              placeholder="Enter User Name" />
+            <input
+              type="text"
+              name="inputField"
+              class="uemail"
+              placeholder="Enter User Email" /><br />
+            <label for="date">Select Issue Date</label><br />
+            <input
+              type="date"
+              name="inputField"
+              class="idate"
+              placeholder="Select Date" />
+            <br />
+            <button type="button" class="submitBtn" data-form="form1">Preview</button>
+          </div>
+        </div>
+      </div>
+      <div class="slider1">
+        <!-- First Set of Cards -->
+        <div class="card">
+          <div class="shead">Select certificate</div>
+          <label for="image1" id="lbl4">
+            <input
+              type="radio"
+              id="image1"
+              name="image-choice-1"
+              class="image-radio" />
+            <img src="./cert/intrn.png" alt="Thumbnail 1" class="view-image"/>
+          </label>
+          <div class="card-form">
+            <!-- Your form elements go here -->
+            <input
+              type="text"
+              name="inputField"
+              class="uname"
+              placeholder="Enter User Name" />
+            <input
+              type="text"
+              name="inputField"
+              class="uemail"
+              placeholder="Enter User Email" /><br />
+            <label for="date">Select Issue Date</label><br />
+            <input
+              type="date"
+              name="inputField"
+              class="idate"
+              placeholder="Select Date" />
+            <br />
+            <button type="button" class="submitBtn" data-form="form1">Preview</button>
+          </div>
+        </div>
+
+        <!-- Second Set of Cards -->
+        <div class="card">
+          <div class="shead">Select certificate</div>
+          <label for="image1" id="lbl5">
+            <input
+              type="radio"
+              id="image1"
+              name="image-choice-1"
+              class="image-radio" />
+            <img src="./cert/trn.png" alt="Thumbnail 1" class="view-image"/>
+          </label>
+          <div class="card-form">
+            <!-- Your form elements go here -->
+            <input
+              type="text"
+              name="inputField"
+              class="uname"
+              placeholder="Enter User Name" />
+            <input
+              type="text"
+              name="inputField"
+              class="uemail"
+              placeholder="Enter User Email" /><br />
+            <label for="date">Select Issue Date</label><br />
+            <input
+              type="date"
+              name="inputField"
+              class="idate"
+              placeholder="Select Date" />
+            <br />
+            <button type="button" class="submitBtn" data-form="form1">Preview</button>
+          </div>
+        </div>
+
+        <!-- Third Set of Cards -->
+        <div class="card">
+          <div class="shead">Select certificate</div>
+          <label for="image1" id="lbl6">
+            <input
+              type="radio"
+              id="image1"
+              name="image-choice-1"
+              class="image-radio" />
+            <img src="./cert/apres.jpg" alt="Thumbnail 1" class="view-image"/>
+          </label>
+          <div class="card-form">
+            <!-- Your form elements go here -->
+            <input
+              type="text"
+              name="inputField"
+              class="uname"
+              placeholder="Enter User Name" />
+            <input
+              type="text"
+              name="inputField"
+              class="uemail"
+              placeholder="Enter User Email" /><br />
+            <label for="date">Select Issue Date</label><br />
+            <input
+              type="date"
+              name="inputField"
+              class="idate"
+              placeholder="Select Date" />
+            <br />
+            <button type="button" class="submitBtn" data-form="form1">Preview</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ... (rest of your code) ... -->
+
+      <div class="modal-overlay" id="popup">
+        <div class="modal-content">
+          <span class="close-popup">&times;</span>
+          <img id="selected-image" src="" alt="Selected Image" /><br />
+          <button class="showmes" onclick="showSuccessAlert()">Mint</button>
+        </div>
+      </div>
+    </div>
+    <div class="alert" id="successAlert">
+      <h1>Your Request Is In Minting Proccess</h1>
+      <br />
+      <br />
+      <h3>(Please Check Your Email After a Few Minutes)</h3>
+    </div>
+
+    <footer id="footer">
+      <p class="copyright-text">
+        Copyright &copy; 2023 All Rights Reserved by <a href="#">Mobifly</a>.
+      </p>
+    </footer>
+
+    <script>
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("successAlert").style.display = "none";
+      document.querySelector(".slider-container").style.display = "none";
+      $(document).ready(function () {
+
+        $("#lbl1").click(function () {
+          // $(".card-form").hide();
+          // Show the form in the selected card
+          $(this).closest(".card").find(".card-form").show();
+        });
+        $("#lbl2").click(function () {
+          $(".card-form").hide();
+          // Show the form in the selected card
+          $(this).closest(".card").find(".card-form").show();
+        });
+        $("#lbl3").click(function () {
+          $(".card-form").hide();
+          // Show the form in the selected card
+          $(this).closest(".card").find(".card-form").show();
+        });
+        $("#lbl4").click(function () {
+          $(".card-form").hide();
+          // Show the form in the selected card
+          $(this).closest(".card").find(".card-form").show();
+        });
+        $("#lbl5").click(function () {
+          $(".card-form").hide();
+          // Show the form in the selected card
+          $(this).closest(".card").find(".card-form").show();
+        });
+        $("#lbl6").click(function () {
+          $(".card-form").hide();
+          // Show the form in the selected card
+          $(this).closest(".card").find(".card-form").show();
+        });
+
+
+        $(".submitBtn").click(function () {
+          var selectedImage = $(this).closest(".card").find("img").attr("src");
+          $("#selected-image").attr("src", selectedImage);
+          $("#popup").show();
+        });
+
+        
+
+        $(".close-popup").click(function () {
+          $("#popup").hide();
+        });
+
+        $(".submitBtn").click(function () {
+          // Get the selected card
+              var selectedCard = $(this).closest(".card");
+              var selectedImageSrc = selectedCard.find("img").attr("src");
+              // Your image path
+              var imagePath = selectedImageSrc;
+
+              // Use split to break the path into an array using "/"
+              var pathArray = imagePath.split("/");
+
+              // Get the last element of the array, which is the file name
+              var fileName = pathArray[pathArray.length - 1];
+
+              console.log(fileName); // Output: apres.jpg
+
+
+
+              // Get user details from the form
+              var name = selectedCard.find(".uname").val();
+              var email = selectedCard.find(".uemail").val();
+              var date = selectedCard.find(".idate").val();
+
+              // Display or use the user-entered values as needed
+              console.log(name + ' ' + email + ' ' + date);
+
+
+              if(fileName=="apres.jpg"){
+                // Draw user details on the selected image
+                handleDetail1(name, email, date);
+              }else if (fileName == "award.jpg"){
+                handleDetail2(name,email,date);
+              }else if (fileName == "trn.png"){
+                handleDetail3(name,email,date);
+              }else if (fileName == "eom.jpg"){
+                handleDetail4(name,email,date);
+              }else if (fileName == "intrn.png"){
+                handleDetail5(name,email,date);
+              }else{
+                alert("pls select any images")
+              }
+
+        });
+
+        function handleDetail1(name, email, date) {
+          // Get the selected card
+          var selectedCard = $('input[name="image-choice-1"]:checked').closest(".card");
+
+          // Get the source of the selected image
+          var selectedImageSrc = selectedCard.find("img").attr("src");
+
+          // Set the image source directly by providing the image path
+          $("#selected-image").attr("src", selectedImageSrc);
+
+          // Create a new canvas element
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+
+          // Set the size of the canvas as needed
+          canvas.width = 500; // Adjust the width as per your requirement
+          canvas.height = 500; // Adjust the height as per your requirement
+
+          // Create a new Image object
+          const img = new Image();
+
+          // When the image is loaded, draw it on the canvas along with user details
+          img.onload = function () {
+            // Draw the image on the canvas
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // Draw user details on the created canvas
+            ctx.font = '20px bold';
+            ctx.fillStyle = 'black';
+
+            ctx.fillText(`${name}`, 170,215);
+            ctx.fillText(`${email}`, 160,300);
+            ctx.fillText(`${date}`, 80, 395);
+
+            // Create a new popup box
+            createPopup(canvas.toDataURL()); // Pass the canvas as an image data URL
+
+          };
+
+          // Set the source of the Image object
+          img.src = selectedImageSrc;
+        }
+
+        function handleDetail2(name, email, date) {
+          // Get the selected card
+          var selectedCard = $('input[name="image-choice-1"]:checked').closest(".card");
+
+          // Get the source of the selected image
+          var selectedImageSrc = selectedCard.find("img").attr("src");
+
+          // Set the image source directly by providing the image path
+          $("#selected-image").attr("src", selectedImageSrc);
+
+          // Create a new canvas element
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+
+          // Set the size of the canvas as needed
+          canvas.width = 500; // Adjust the width as per your requirement
+          canvas.height = 500; // Adjust the height as per your requirement
+
+          // Create a new Image object
+          const img = new Image();
+
+          // When the image is loaded, draw it on the canvas along with user details
+          img.onload = function () {
+            // Draw the image on the canvas
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // Draw user details on the created canvas
+            ctx.font = '30px bold';
+            ctx.fillStyle = 'black';
+
+            ctx.fillText(`${name}`, 200,240);
+            ctx.fillText(`${email}`, 230,300);
+            ctx.fillText(`${date}`, 200, 470);
+
+            // Create a new popup box
+            createPopup(canvas.toDataURL()); // Pass the canvas as an image data URL
+
+          };
+
+          // Set the source of the Image object
+          img.src = selectedImageSrc;
+        }
+
+
+        function handleDetail3(name, email, date) {
+          // Get the selected card
+          var selectedCard = $('input[name="image-choice-1"]:checked').closest(".card");
+
+          // Get the source of the selected image
+          var selectedImageSrc = selectedCard.find("img").attr("src");
+
+          // Set the image source directly by providing the image path
+          $("#selected-image").attr("src", selectedImageSrc);
+
+          // Create a new canvas element
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+
+          // Set the size of the canvas as needed
+          canvas.width = 500; // Adjust the width as per your requirement
+          canvas.height = 500; // Adjust the height as per your requirement
+
+          // Create a new Image object
+          const img = new Image();
+
+          // When the image is loaded, draw it on the canvas along with user details
+          img.onload = function () {
+            // Draw the image on the canvas
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // Draw user details on the created canvas
+            ctx.font = '20px bold';
+            ctx.fillStyle = 'black';
+
+            ctx.fillText(`${name}`, 210,190);
+            ctx.fillText(`${email}`, 240,210);
+            ctx.fillText(`${date}`, 225, 325);
+
+            // Create a new popup box
+            createPopup(canvas.toDataURL()); // Pass the canvas as an image data URL
+
+          };
+
+          // Set the source of the Image object
+          img.src = selectedImageSrc;
+        }
+        function handleDetail4(name, email, date) {
+          // Get the selected card
+          var selectedCard = $('input[name="image-choice-1"]:checked').closest(".card");
+
+          // Get the source of the selected image
+          var selectedImageSrc = selectedCard.find("img").attr("src");
+
+          // Set the image source directly by providing the image path
+          $("#selected-image").attr("src", selectedImageSrc);
+
+          // Create a new canvas element
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+
+          // Set the size of the canvas as needed
+          canvas.width = 500; // Adjust the width as per your requirement
+          canvas.height = 500; // Adjust the height as per your requirement
+
+          // Create a new Image object
+          const img = new Image();
+
+          // When the image is loaded, draw it on the canvas along with user details
+          img.onload = function () {
+            // Draw the image on the canvas
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // Draw user details on the created canvas
+            ctx.font = '20px bold';
+            ctx.fillStyle = 'black';
+
+            ctx.fillText(`${name}`, 80,200);
+            ctx.fillText(`${email}`, 80,305);
+            ctx.fillText(`${date}`, 10, 430);
+
+            // Create a new popup box
+            createPopup(canvas.toDataURL()); // Pass the canvas as an image data URL
+
+          };
+
+          // Set the source of the Image object
+          img.src = selectedImageSrc;
+        }
+        function handleDetail5(name, email, date) {
+          // Get the selected card
+          var selectedCard = $('input[name="image-choice-1"]:checked').closest(".card");
+
+          // Get the source of the selected image
+          var selectedImageSrc = selectedCard.find("img").attr("src");
+
+          // Set the image source directly by providing the image path
+          $("#selected-image").attr("src", selectedImageSrc);
+
+          // Create a new canvas element
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+
+          // Set the size of the canvas as needed
+          canvas.width = 500; // Adjust the width as per your requirement
+          canvas.height = 500; // Adjust the height as per your requirement
+
+          // Create a new Image object
+          const img = new Image();
+
+          // When the image is loaded, draw it on the canvas along with user details
+          img.onload = function () {
+            // Draw the image on the canvas
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // Draw user details on the created canvas
+            ctx.font = '20px bold';
+            ctx.fillStyle = 'black';
+
+            ctx.fillText(`${name}`, 170,210);
+            ctx.fillText(`${email}`, 260,270);
+            ctx.fillText(`${date}`, 105, 300);
+
+            // Create a new popup box
+            createPopup(canvas.toDataURL()); // Pass the canvas as an image data URL
+
+          };
+
+          // Set the source of the Image object
+          img.src = selectedImageSrc;
+        }
+
+// Function to create a popup box and display the image
+function createPopup(imageSrc) {
+    // Create a new popup element
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+
+    // Create an image element in the popup
+    const popupImage = document.createElement('img');
+    popupImage.src = imageSrc;
+
+    // Append the image to the popup
+    popup.appendChild(popupImage);
+
+    // Append the popup to the document body
+    document.body.appendChild(popup);
+}
+
+
+        $("#loginform").click(function () {
+          // Your login form logic here
+          // For example, show the certificate page
+          showCertificatePage();
+        });
+
+        function showCertificatePage() {
+          document.querySelector(".screen-1").style.display = "none";
+          document.getElementById("maincontent").style.display = "block";
+          document.querySelector(".slider-container").style.display = "block";
+        }
+
+        $(".showmes").click(function () {
+          showSuccessAlert();
+        });
+
+        function showSuccessAlert() {
+          // Your success alert logic here
+          document.getElementById("popup").style.display = "none";
+          document.querySelector(".slider-container").style.display = "none";
+          document.getElementById("successAlert").style.display = "block";
+          document.getElementById("footer").style.display = "none";
+        }
+      });
+
+      $(".close-popup").click(function () {
+        $("#popup").hide();
+      });
+    </script>
+  </body>
+</html>

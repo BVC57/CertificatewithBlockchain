@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Signature Example</title>
+</head>
+<body>
+  <h1>Digital Signature Example</h1>
+  <p id="message">Original Message: saksham</p>
+  <p id="result"></p>
+  <script src="https://kjur.github.io/jsrsasign/jsrsasign-latest-all-min.js"></script>
+  <script>
+    // Step 1: Generate Key Pair
+    const keyPair = KEYUTIL.generateKeypair("RSA", 2048);
+
+    // Step 2: Create a Message
+    const message = 'Hello, World!';
+
+    // Step 3: Hash the Message
+    const hash = KJUR.crypto.Util.sha256(message);
+
+    // Step 4: Sign the Hash
+    const sig = new KJUR.crypto.Signature({alg: 'SHA256withRSA'});
+    sig.init(keyPair.prvKeyObj);
+    sig.updateString(message);
+    const signature = sig.sign();
+
+    // Step 5: Verify the Signature
+    const isValid = new KJUR.crypto.Signature({alg: 'SHA256withRSA'});
+    isValid.init(keyPair.pubKeyObj);
+    isValid.updateString(message);
+    const isSignatureValid = isValid.verify(signature);
+
+    // Display the results in the HTML document
+    document.getElementById('result').textContent = isSignatureValid ? 'Signature is valid.' : 'Signature is not valid.';
+  </script>
+</body>
+</html>

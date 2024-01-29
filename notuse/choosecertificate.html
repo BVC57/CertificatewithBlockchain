@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate with User Details</title>
+    <style>
+        /* Style for hiding the form initially */
+        #userDetailsForm {
+            display: none;
+        }
+
+        /* Style for file input button */
+        #imageInput {
+            margin-bottom: 10px;
+        }
+
+        /* Style for the canvas */
+        #certificateCanvas {
+            border: 2px solid #ccc;
+            margin-top: 20px;
+        }
+
+        /* Style for the form */
+        #userDetailsForm {
+            margin-top: 20px;
+        }
+
+        /* Style for form labels and inputs */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="file" id="imageInput" accept="image/*">
+    <br>
+
+    <form id="userDetailsForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="name">Issuer For:</label>
+        <input type="text" id="for" name="for" required>
+        <br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <br>
+
+        <button type="button" id="submitBtn">Submit</button>
+    </form>
+
+    <canvas id="certificateCanvas" width="500" height="500"></canvas>
+
+    <script>
+        let userDetails = {};
+        document.getElementById("certificateCanvas").style.display = "none";
+
+        document.getElementById('imageInput').addEventListener('change', handleImage);
+
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            const fileInput = document.getElementById('imageInput');
+            const file = fileInput.files[0];
+
+            if (file) {
+                const imageName = file.name;
+
+                if (imageName === "apres.jpg") {
+                    handleDetail1();
+                } else if (imageName == "award.jpg") {
+                    handleDetail2();
+                } else if (imageName == "eom.jpg") {
+                    handleDetail3();
+                } else if (imageName == "intrn.png") {
+                    handleDetail4();
+                } else if (imageName == "trn.png") {
+                    handleDetail5();
+                }
+            }
+        });
+
+        function handleImage(e) {
+            const canvas = document.getElementById('certificateCanvas');
+            const ctx = canvas.getContext('2d');
+
+            const img = new Image();
+            img.onload = function () {
+                // Draw the image on the canvas
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            };
+
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function (event) {
+                img.src = event.target.result;
+
+                // Show the form when an image is selected
+                document.getElementById('userDetailsForm').style.display = 'block';
+            }
+
+            reader.readAsDataURL(file);
+}
+
+
+        function handleDetail1() {
+            document.getElementById('userDetailsForm').style.display = 'block';
+            document.getElementById('imageInput').style.display = 'none';
+            document.getElementById("certificateCanvas").style.display="flex";
+
+            // Get user details from the form
+            userDetails.name = document.getElementById('name').value;
+            userDetails.ifor = document.getElementById('for').value;
+            userDetails.date = document.getElementById('date').value;
+            // Add other user details as needed
+
+            // Draw user details on the canvas
+            const canvas = document.getElementById('certificateCanvas');
+            const ctx = canvas.getContext('2d');
+
+            ctx.font = '20px bold';
+            ctx.fillStyle = 'black';
+
+            ctx.fillText(`${userDetails.name}`, 150,215);
+            ctx.fillText(`${userDetails.ifor}`, 220,310);
+            ctx.fillText(`${userDetails.date}`, 80, 395);
+            // Add other text as needed
+        }
+
+        function handleDetail2() {
+            document.getElementById('userDetailsForm').style.display = 'block';
+            document.getElementById('imageInput').style.display = 'none';
+            document.getElementById("certificateCanvas").style.display="flex";
+
+            // Get user details from the form
+            userDetails.name = document.getElementById('name').value;
+            userDetails.ifor = document.getElementById('for').value;
+            userDetails.date = document.getElementById('date').value;
+            // Add other user details as needed
+
+            // Draw user details on the canvas
+            const canvas = document.getElementById('certificateCanvas');
+            const ctx = canvas.getContext('2d');
+
+            ctx.font = '30px bold';
+            ctx.fillStyle = 'black';
+
+            ctx.fillText(`${userDetails.name}`, 100,240);
+            ctx.fillText(`${userDetails.ifor}`, 230,300);
+            ctx.fillText(`${userDetails.date}`, 200, 470);
+            // Add other text as needed
+        }
+
+
+        function handleDetail3() {
+            document.getElementById('userDetailsForm').style.display = 'block';
+            document.getElementById('imageInput').style.display = 'none';
+            document.getElementById("certificateCanvas").style.display="flex";
+
+            // Get user details from the form
+            userDetails.name = document.getElementById('name').value;
+            userDetails.ifor = document.getElementById('for').value;
+            userDetails.date = document.getElementById('date').value;
+            // Add other user details as needed
+
+            // Draw user details on the canvas
+            const canvas = document.getElementById('certificateCanvas');
+            const ctx = canvas.getContext('2d');
+
+            ctx.font = '20px bold';
+            ctx.fillStyle = 'black';
+
+            ctx.fillText(`${userDetails.name}`, 30,200);
+            ctx.fillText(`${userDetails.ifor}`, 80,305);
+            ctx.fillText(`${userDetails.date}`, 10, 430);
+            // Add other text as needed
+        }
+
+
+        function handleDetail4() {
+            document.getElementById('userDetailsForm').style.display = 'block';
+            document.getElementById('imageInput').style.display = 'none';
+            document.getElementById("certificateCanvas").style.display="flex";
+
+            // Get user details from the form
+            userDetails.name = document.getElementById('name').value;
+            userDetails.ifor = document.getElementById('for').value;
+            userDetails.date = document.getElementById('date').value;
+            // Add other user details as needed
+
+            // Draw user details on the canvas
+            const canvas = document.getElementById('certificateCanvas');
+            const ctx = canvas.getContext('2d');
+
+            ctx.font = '20px bold';
+            ctx.fillStyle = 'black';
+
+            ctx.fillText(`${userDetails.name}`, 140,210);
+            ctx.fillText(`${userDetails.ifor}`, 260,270);
+            ctx.fillText(`${userDetails.date}`, 105, 300);
+            // Add other text as needed
+        }
+
+
+        function handleDetail5() {
+            document.getElementById('userDetailsForm').style.display = 'block';
+            document.getElementById('imageInput').style.display = 'none';
+            document.getElementById("certificateCanvas").style.display="flex";
+
+            // Get user details from the form
+            userDetails.name = document.getElementById('name').value;
+            userDetails.ifor = document.getElementById('for').value;
+            userDetails.date = document.getElementById('date').value;
+            // Add other user details as needed
+
+            // Draw user details on the canvas
+            const canvas = document.getElementById('certificateCanvas');
+            const ctx = canvas.getContext('2d');
+
+            ctx.font = '15px bold';
+            ctx.fillStyle = 'black';
+
+            ctx.fillText(`${userDetails.name}`, 200,190);
+            ctx.fillText(`${userDetails.ifor}`, 220,210);
+            ctx.fillText(`${userDetails.date}`, 225, 325);
+            // Add other text as needed
+        }
+
+        // Rest of your existing code for functions handleDetail1() through handleDetail5()
+    </script>
+</body>
+
+</html>

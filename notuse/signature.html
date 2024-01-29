@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Signature Example</title>
+</head>
+<body>
+  <script>
+    async function generateKeyPair() {
+      const keyPair = await window.crypto.subtle.generateKey(
+        {
+          name: 'RSASSA-PKCS1-v1_5',
+          modulusLength: 2048,
+          publicExponent: new Uint8Array([1, 0, 1]),
+          hash: 'SHA-256',
+        },
+        true,
+        ['sign', 'verify']
+      );
+
+      return keyPair;
+    }
+
+    async function signData(privateKey, dataToSign) {
+      const signature = await window.crypto.subtle.sign(
+        {
+          name: 'RSASSA-PKCS1-v1_5',
+        },
+        privateKey,
+        new TextEncoder().encode(dataToSign)
+      );
+
+      return new Uint8Array(signature);
+    }
+
+    function displayCertificate(publicKey, signature) {
+      console.log('-----BEGIN PUBLIC KEY-----');
+      console.log(publicKey);
+      console.log('-----END PUBLIC KEY-----');
+      console.log('Digital Signature (Hex):');
+      console.log(Array.from(signature, byte => byte.toString(16)).join(''));
+
+      // Convert the signature to base64
+      const base64Signature = btoa(String.fromCharCode.apply(null, signature));
+      console.log('Digital Signature (Base64):');
+      console.log(base64Signature);
+    }
+
+    async function main() {
+      // Step 1: Generate key pair
+      const keyPair = await generateKeyPair();
+
+      // Step 2: Simulate user login data
+      const loginData = 'User123';
+      
+      // Step 3: Combine login data with additional information for signing
+      const dataToSign = `${loginData}||AdditionalDataForSigning`;
+
+      // Step 4: Generate digital signature
+      const signature = await signData(keyPair.privateKey, dataToSign);
+
+      // Step 5: Display the public key and digital signature
+      displayCertificate(keyPair.publicKey, signature);
+    }
+
+    // Run the main function
+    main();
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .initials-container {
+  display: flex;
+  align-items: center;
+  font-size: 36px; /* Adjust font size as needed */
+  font-weight: bold;
+  color: #333; /* Adjust color as needed */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="initials-container">
+        <span class="initial">A</span>
+        <span class="initial">C</span>
+    </div>
+      <p class="full-name">ashish jain</p>
+<script>
+    const fullName = document.querySelector(".full-name").textContent;
+const initialsContainer = document.querySelector(".initials-container");
+initialsContainer.innerHTML = ""; // Clear existing initials
+
+const names = fullName.split(" ");
+names.forEach(name => {
+  const initial = name.charAt(0).toUpperCase();
+  const initialSpan = document.createElement("span");
+  initialSpan.classList.add("initial");
+  initialSpan.textContent = initial;
+  initialsContainer.appendChild(initialSpan);
+});
+
+// Check if MetaMask is installed
+if (window.ethereum) {
+  const ethereum = window.ethereum;
+
+  // Request permission to access the user's accounts
+  ethereum.request({ method: 'eth_requestAccounts' })
+    .then((accounts) => {
+      const userAddress = accounts[0];
+      console.log('User Address:', userAddress);
+
+      // You can now use the user's address for your application
+    })
+    .catch((error) => {
+      console.error('Error requesting accounts:', error);
+    });
+} else {
+  console.error('MetaMask is not installed');
+}
+
+</script>    
+</body>
+</html>

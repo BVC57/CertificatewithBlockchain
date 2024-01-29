@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Create Cerificate</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="mainlogo"><img src="./cert//logo1.png" alt="" /></div>
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- <div id="pkey"></div> -->
+
+    <div class="content" id="maincontent">
+      <div class="screen-1">
+        <div class="logo">
+          <img src="./cert/logo1.png" alt="not found" />
+        </div>
+        <div class="email">
+          <label for="email">Issuer Name</label>
+          <div class="sec-2">
+            <ion-icon name="mail-outline"></ion-icon>
+            <input type="email" name="email" placeholder="Issuer Name" />
+          </div>
+        </div>
+        <div class="password">
+          <label for="password">Issue PublicKey</label>
+          <div class="sec-2">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input
+              class="pas"
+              type="password"
+              name="password"
+              placeholder="**********" />
+            <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+          </div>
+        </div>
+        <button class="login" id="loginform" onclick="">Login</button>
+      </div>
+
+      <div class="slider-container">
+        <div class="shead">Select certificate</div>
+        <div class="slider">
+          <!-- First Set of Cards -->
+          <div class="card">
+            <label for="image1" id="lbl1">
+              <input
+                type="radio"
+                id="image1"
+                name="image-choice-1"
+                class="image-radio" />
+              <img
+                src="./cert/apres.jpg"
+                alt="Thumbnail 1"
+                class="view-image" />
+            </label>
+            <div class="card-form">
+              <!-- Your form elements go here -->
+              <input
+                type="text"
+                name="inputField"
+                class="uid"
+                placeholder="Enter User Id" />
+              <input
+                type="text"
+                name="inputField"
+                class="uname"
+                placeholder="Enter Name" />
+              <input
+                type="text"
+                name="inputField"
+                class="uemail"
+                placeholder="Enter Email" />
+              <input
+                type="text"
+                name="inputField"
+                class="afor"
+                placeholder="Enter Apply for" /><br />
+              <label for="date">Select Issue Date</label><br />
+              <input
+                type="date"
+                name="inputField"
+                class="idate"
+                placeholder="Select Date" />
+              <br />
+              <button type="button" class="submitBtn" data-form="form1">
+                Preview
+              </button>
+            </div>
+          </div>
+
+          <!-- Second Set of Cards -->
+          <div class="card">
+            <label for="image2" id="lbl2">
+              <input
+                type="radio"
+                id="image2"
+                name="image-choice-2"
+                class="image-radio" />
+              <img
+                src="./cert/award.jpg"
+                alt="Thumbnail 1"
+                class="view-image" />
+            </label>
+            <div class="card-form">
+              <!-- Your form elements go here -->
+              <input
+                type="text"
+                name="inputField"
+                class="uid"
+                placeholder="Enter User Id" />
+              <input
+                type="text"
+                name="inputField"
+                class="uname"
+                placeholder="Enter Name" />
+              <input
+                type="text"
+                name="inputField"
+                class="uemail"
+                placeholder="Enter Email" />
+              <input
+                type="text"
+                name="inputField"
+                class="afor"
+                placeholder="Enter Apply for" /><br />
+              <label for="date">Select Issue Date</label><br />
+              <input
+                type="date"
+                name="inputField"
+                class="idate"
+                placeholder="Select Date" />
+              <br />
+              <button type="button" class="submitBtn" data-form="form1">
+                Preview
+              </button>
+            </div>
+          </div>
+
+          <!-- Third Set of Cards -->
+          <div class="card">
+            <label for="image3" id="lbl3">
+              <input
+                type="radio"
+                id="image3"
+                name="image-choice-3"
+                class="image-radio" />
+              <img src="./cert/eom.jpg" alt="Thumbnail 1" class="view-image" />
+            </label>
+            <div class="card-form">
+              <!-- Your form elements go here -->
+              <input
+                type="text"
+                name="inputField"
+                class="uid"
+                placeholder="Enter User Id" />
+              <input
+                type="text"
+                name="inputField"
+                class="uname"
+                placeholder="Enter Name" />
+              <input
+                type="text"
+                name="inputField"
+                class="uemail"
+                placeholder="Enter Email" />
+              <input
+                type="text"
+                name="inputField"
+                class="afor"
+                placeholder="Enter Apply For" /><br />
+              <label for="date">Select Issue Date</label><br />
+              <input
+                type="date"
+                name="inputField"
+                class="idate"
+                placeholder="Select Date" />
+              <br />
+              <button type="button" class="submitBtn" data-form="form1">
+                Preview
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="slider1">
+          <!-- First Set of Cards -->
+          <div class="card">
+            <label for="image4" id="lbl4">
+              <input
+                type="radio"
+                id="image4"
+                name="image-choice-4"
+                class="image-radio" />
+              <img
+                src="./cert/intrn.png"
+                alt="Thumbnail 1"
+                class="view-image" />
+            </label>
+            <div class="card-form">
+              <!-- Your form elements go here -->
+              <input
+                type="text"
+                name="inputField"
+                class="uid"
+                placeholder="Enter User Id" />
+              <input
+                type="text"
+                name="inputField"
+                class="uname"
+                placeholder="Enter Name" />
+              <input
+                type="text"
+                name="inputField"
+                class="uemail"
+                placeholder="Enter Email" />
+              <input
+                type="text"
+                name="inputField"
+                class="afor"
+                placeholder="Enter Apply for" /><br />
+              <label for="date">Select Issue Date</label><br />
+              <input
+                type="date"
+                name="inputField"
+                class="idate"
+                placeholder="Select Date" />
+              <br />
+              <button type="button" class="submitBtn" data-form="form1">
+                Preview
+              </button>
+            </div>
+          </div>
+
+          <!-- Second Set of Cards -->
+          <div class="card">
+            <label for="image5" id="lbl5">
+              <input
+                type="radio"
+                id="image5"
+                name="image-choice-5"
+                class="image-radio" />
+              <img src="./cert/trn.png" alt="Thumbnail 1" class="view-image" />
+            </label>
+            <div class="card-form">
+              <!-- Your form elements go here -->
+              <input
+                type="text"
+                name="inputField"
+                class="uid"
+                placeholder="Enter User Id" />
+              <input
+                type="text"
+                name="inputField"
+                class="uname"
+                placeholder="Enter Name" />
+              <input
+                type="text"
+                name="inputField"
+                class="uemail"
+                placeholder="Enter Email" />
+              <input
+                type="text"
+                name="inputField"
+                class="afor"
+                placeholder="Enter Apply For" /><br />
+              <label for="date">Select Issue Date</label><br />
+              <input
+                type="date"
+                name="inputField"
+                class="idate"
+                placeholder="Select Date" />
+              <br />
+              <button type="button" class="submitBtn" data-form="form1">
+                Preview
+              </button>
+            </div>
+          </div>
+
+          <!-- Third Set of Cards -->
+          <div class="card">
+            <label for="image6" id="lbl6">
+              <input
+                type="radio"
+                id="image6"
+                name="image-choice-6"
+                class="image-radio" />
+              <img src="./cert/exl.jpg" alt="Thumbnail 1" class="view-image" />
+            </label>
+            <div class="card-form">
+              <!-- Your form elements go here -->
+              <input
+                type="text"
+                name="inputField"
+                class="uid"
+                placeholder="Enter User Id" />
+              <input
+                type="text"
+                name="inputField"
+                class="uname"
+                placeholder="Enter Name" />
+              <input
+                type="text"
+                name="inputField"
+                class="uemail"
+                placeholder="Enter Email" />
+              <input
+                type="text"
+                name="inputField"
+                class="afor"
+                placeholder="Enter Apply For" /><br />
+              <label for="date">Select Issue Date</label><br />
+              <input
+                type="date"
+                name="inputField"
+                class="idate"
+                placeholder="Select Date" />
+              <br />
+              <button type="button" class="submitBtn" data-form="form1">
+                Preview
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ... (rest of your code) ... -->
+
+        <div class="modal-overlay" id="popup">
+          <div class="modal-content">
+            <span class="close-popup">&times;</span>
+            <img id="selected-image" src="" alt="Selected Image" /><br />
+            <button class="showmes" id="mint">Mint NFT</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ... (rest of your code) ... -->
+    </div>
+    <!-- Success Alert Popup -->
+    <div class="alert" id="successAlert">
+      <h1>Your Request Is In Minting Proccess</h1>
+      <br />
+      <br />
+      <h3>(Please Check Your Email After a Few Minutes)</h3>
+    </div>
+    <footer id="footer">
+      <p class="copyright-text">
+        Copyright &copy; 2023 All Rights Reserved by <a href="#">Mobifly</a>.
+      </p>
+    </footer>
+    <script type="module" src="script.js"></script>
+    <!-- Your existing footer code -->
+
+    <script>
+      let metakey;
+      let ipfsdata;
+      const now = new Date().toString().slice(4, 24);
+      // alert(now)
+      // Check if MetaMask is installed
+      if (window.ethereum) {
+        const ethereum = window.ethereum;
+        const adrs = document.getElementById("pkey");
+
+        // Request permission to access the user's accounts
+        ethereum
+          .request({ method: "eth_requestAccounts" })
+          .then((accounts) => {
+            const userAddress = accounts[0];
+            metakey = userAddress;
+            console.log(userAddress);
+            // Display first 4 letters after ellipsis and last 4 letters
+            const publickey = `Metamask PublicKey:-${userAddress.slice(
+              0,
+              3
+            )}...${userAddress.slice(-4)}`;
+            console.log("User Address:", publickey);
+            adrs.innerHTML = publickey;
+
+            // You can now use the user's address for your application
+          })
+          .catch((error) => {
+            console.error("Error requesting accounts:", error);
+          });
+      } else {
+        console.error("MetaMask is not installed");
+        adrs.innerHTML = "metamask not Install";
+      }
+
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("successAlert").style.display = "none";
+      document.querySelector(".slider-container").style.display = "none";
+      $(document).ready(function () {
+        $(".image-radio").click(function () {
+          $(".card-form").hide();
+          $(this).closest(".card").find(".card-form").show();
+        });
+
+        $(".submitBtn").click(function () {
+          var selectedCard = $(this).closest(".card");
+          var name = selectedCard.find(".uname").val();
+          var uid = selectedCard.find(".uid").val();
+          var email = selectedCard.find(".uemail").val();
+          var date = selectedCard.find(".idate").val();
+          var Applyfor = selectedCard.find(".afor").val();
+          var selectedImageSrc = selectedCard.find("img").attr("src");
+          console.log("name", name);
+          console.log("user id", uid);
+          console.log("email", email);
+          console.log("Aplly for", Applyfor);
+          console.log("date", date);
+
+          // Your image path
+          var imagePath = selectedImageSrc;
+
+          // Use split to break the path into an array using "/"
+          var pathArray = imagePath.split("/");
+
+          // Get the last element of the array, which is the file name
+          var fileName = pathArray[pathArray.length - 1];
+
+          console.log(fileName); // Output: apres.jpg
+
+          if (fileName == "apres.jpg") {
+            handleDetail1(name, Applyfor, date, imagePath, uid, email);
+          } else if (fileName == "award.jpg") {
+            handleDetail2(name, Applyfor, date, imagePath, uid, email);
+          } else if (fileName == "trn.png") {
+            handleDetail3(name, Applyfor, date, imagePath, uid, email);
+          } else if (fileName == "eom.jpg") {
+            handleDetail4(name, Applyfor, date, imagePath, uid, email);
+          } else if (fileName == "intrn.png") {
+            handleDetail5(name, Applyfor, date, imagePath, uid, email);
+          } else if (fileName == "exl.jpg") {
+            handleDetail6(name, Applyfor, date, imagePath, uid, email);
+          } else {
+            alert("pls select any images");
+          }
+        });
+
+        function handleDetail1(name, Applyfor, date, imagePath, uid, email) {
+          console.log("handel name", name);
+          console.log("handel1 user id", uid);
+          console.log("handel1 email", email);
+          console.log("handel1 Aplly for", Applyfor);
+          console.log("handel1 date", date);
+          // Get the source of the selected image
+          var selectedImageSrc = imagePath;
+          // Create a new canvas element
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+
+          // Set the size of the canvas as needed
+          canvas.width = 500; // Adjust the width as per your requirement
+          canvas.height = 500; // Adjust the height as per your requirement
+
+          // Create a new Image object
+          const img = new Image();
+
+          // When the image is loaded, draw it on the canvas along with user details
+          img.onload = function () {
+            // Draw the image on the canvas
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // Draw user details on the created canvas
+            ctx.font = "20px bold";
+            ctx.fillStyle = "black";
+
+            ctx.fillText(`${name}`, 170, 215);
+            ctx.fillText(`${Applyfor}`, 180, 300);
+            ctx.fillText(`${date}`, 80, 395);
+
+            // Create a new popup box
+            createPopup(canvas.toDataURL()); // Pass the canvas as an image data URL
+
+            // Call ipfsUploader with the canvas data URL
+            // ipfsUploader(uid, name, email, canvas.toDataURL());
+            ipfsdata = {
+              uid: uid,
+              name: name,
+              email: email,
+              imageDataURL: canvas.toDataURL(),
+            };
+          };
+
+          // Set the source of the Image object
+          img.src = selectedImageSrc;
+          // const newimg=img.src;
+          // console.log("data for ipfs",uid,name,email,newimg)
+          // ipfsUploader(uid,name,email,newimg)
+        }
+
+        function handleDetail2(name, Applyfor, date, imagePath, uid, email) {
+          // Get the source of the selected image
+          var selectedImageSrc = imagePath;
+
+          // Create a new canvas element
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+
+          // Set the size of the canvas as needed
+          canvas.width = 500; // Adjust the width as per your requirement
+          canvas.height = 500; // Adjust the height as per your requirement
+
+          // Create a new Image object
+          const img = new Image();
+
+          // When the image is loaded, draw it on the canvas along with user details
+          img.onload = function () {
+            // Draw the image on the canvas
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // Draw user details on the created canvas
+            ctx.font = "30px bold";
+            ctx.fillStyle = "black";
+
+            ctx.fillText(`${name}`, 170, 240);
+            ctx.fillText(`${Applyfor}`, 230, 300);
+            ctx.fillText(`${date}`, 200, 470);
+
+            // Create a new popup box
+            createPopup(canvas.toDataURL()); // Pass the canvas as an image data URL
+
+            // Call ipfsUploader with the canvas data URL
+            // ipfsUploader(uid, name, email, canvas.toDataURL());
+            ipfsdata = {
+              uid: uid,
+              name: name,
+              email: email,
+              imageDataURL: canvas.toDataURL(),
+            };
+          };
+
+          // Set the source of the Image object
+          img.src = selectedImageSrc;
+        }
+
+        function handleDetail3(name, Applyfor, date, imagePath, uid, email) {
+          // Get the source of the selected image
+          var selectedImageSrc = imagePath;
+
+          // Create a new canvas element
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+
+          // Set the size of the canvas as needed
+          canvas.width = 500; // Adjust the width as per your requirement
+          canvas.height = 500; // Adjust the height as per your requirement
+
+          // Create a new Image object
+          const img = new Image();
+
+          // When the image is loaded, draw it on the canvas along with user details
+          img.onload = function () {
+            // Draw the image on the canvas
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // Draw user details on the created canvas
+            ctx.font = "15px bold";
+            ctx.fillStyle = "black";
+
+            ctx.fillText(`${name}`, 200, 190);
+            ctx.fillText(`${Applyfor}`, 230, 210);
+            ctx.fillText(`${date}`, 225, 325);
+
+            // Create a new popup box
+            createPopup(canvas.toDataURL()); // Pass the canvas as an image data URL
+
+            // Call ipfsUploader with the canvas data URL
+            // ipfsUploader(uid, name, email, canvas.toDataURL());
+            ipfsdata = {
+              uid: uid,
+              name: name,
+              email: email,
+              imageDataURL: canvas.toDataURL(),
+            };
+          };
+
+          // Set the source of the Image object
+          img.src = selectedImageSrc;
+        }
+
+        function handleDetail4(name, Applyfor, date, imagePath, uid, email) {
+          // Get the source of the selected image
+          var selectedImageSrc = imagePath;
+
+          // Create a new canvas element
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+
+          // Set the size of the canvas as needed
+          canvas.width = 500; // Adjust the width as per your requirement
+          canvas.height = 500; // Adjust the height as per your requirement
+
+          // Create a new Image object
+          const img = new Image();
+
+          // When the image is loaded, draw it on the canvas along with user details
+          img.onload = function () {
+            // Draw the image on the canvas
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // Draw user details on the created canvas
+            ctx.font = "20px bold";
+            ctx.fillStyle = "black";
+
+            ctx.fillText(`${name}`, 80, 200);
+            ctx.fillText(`${Applyfor}`, 80, 305);
+            ctx.fillText(`${date}`, 10, 430);
+
+            // Create a new popup box
+            createPopup(canvas.toDataURL()); // Pass the canvas as an image data URL
+
+            // Call ipfsUploader with the canvas data URL
+            // ipfsUploader(uid, name, email, canvas.toDataURL());
+            ipfsdata = {
+              uid: uid,
+              name: name,
+              email: email,
+              imageDataURL: canvas.toDataURL(),
+            };
+          };
+
+          // Set the source of the Image object
+          img.src = selectedImageSrc;
+        }
+
+        function handleDetail5(name, Applyfor, date, imagePath, uid, email) {
+          // Get the source of the selected image
+          var selectedImageSrc = imagePath;
+
+          // Create a new canvas element
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+
+          // Set the size of the canvas as needed
+          canvas.width = 500; // Adjust the width as per your requirement
+          canvas.height = 500; // Adjust the height as per your requirement
+
+          // Create a new Image object
+          const img = new Image();
+
+          // When the image is loaded, draw it on the canvas along with user details
+          img.onload = function () {
+            // Draw the image on the canvas
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // Draw user details on the created canvas
+            ctx.font = "20px bold";
+            ctx.fillStyle = "black";
+
+            ctx.fillText(`${name}`, 170, 210);
+            ctx.fillText(`${Applyfor}`, 260, 270);
+            ctx.fillText(`${date}`, 105, 300);
+
+            // Create a new popup box
+            createPopup(canvas.toDataURL()); // Pass the canvas as an image data URL
+
+            // Call ipfsUploader with the canvas data URL
+            // ipfsUploader(uid, name, email, canvas.toDataURL());
+            ipfsdata = {
+              uid: uid,
+              name: name,
+              email: email,
+              imageDataURL: canvas.toDataURL(),
+            };
+          };
+
+          // Set the source of the Image object
+          img.src = selectedImageSrc;
+        }
+
+        function handleDetail6(name, Applyfor, date, imagePath, uid, email) {
+          // Get the source of the selected image
+          var selectedImageSrc = imagePath;
+
+          // Create a new canvas element
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+
+          // Set the size of the canvas as needed
+          canvas.width = 500; // Adjust the width as per your requirement
+          canvas.height = 500; // Adjust the height as per your requirement
+
+          // Create a new Image object
+          const img = new Image();
+
+          // When the image is loaded, draw it on the canvas along with user details
+          img.onload = function () {
+            // Draw the image on the canvas
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // Draw user details on the created canvas
+            ctx.font = "20px bold";
+            ctx.fillStyle = "black";
+
+            ctx.fillText(`${name}`, 170, 200);
+            ctx.fillText(`${Applyfor}`, 200, 270);
+            ctx.fillText(`${date}`, 135, 360);
+
+            // Create a new popup box
+            createPopup(canvas.toDataURL()); // Pass the canvas as an image data URL
+
+            // Call ipfsUploader with the canvas data URL
+            // ipfsUploader(uid, name, email, canvas.toDataURL());
+            // Store all data in one variable (an object in this case)
+            ipfsdata = {
+              uid: uid,
+              name: name,
+              email: email,
+              imageDataURL: canvas.toDataURL(),
+            };
+          };
+
+          // Set the source of the Image object
+          img.src = selectedImageSrc;
+        }
+
+        function createPopup(imageSrc) {
+          $("#selected-image").attr("src", imageSrc);
+          $("#popup").show();
+        }
+
+        $(".close-popup").click(function () {
+          $("#popup").hide();
+        });
+
+        $("#loginform").click(function () {
+          showCertificatePage();
+        });
+
+        function showCertificatePage() {
+          $(".screen-1").hide();
+          $("#maincontent").show();
+          $(".slider-container").show();
+        }
+
+        $(".showmes").click(function () {
+          showSuccessAlert();
+        });
+
+        function showSuccessAlert() {
+          // alert("Confirmation Page Is Sent To Your Mail");
+          $("#popup").hide();
+          $(".slider-container").hide();
+          $("#successAlert").show();
+          $("#footer").hide();
+        }
+
+        // function showSuccessAlert() {
+        //     // Your success alert logic here
+        //     document.getElementById("popup").style.display = "none";
+        //     document.querySelector(".slider-container").style.display = "none";
+        //     document.getElementById("successAlert").style.display = "block";
+        //     document.getElementById("footer").style.display = "none";
+        //   }
+
+        $(".showmes").click(function () {
+          showSuccessAlert();
+          ipfsUploader(ipfsdata);
+        });
+      });
+
+      function ipfsUploader(ipfsdata) {
+        alert("Confirmation Page Is Sent To Your Mail");
+        console.log("ipfs uploader is calling");
+
+        const apiKey =
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweEQwNjMyODNDMzhDQjZjYzljRjIzOTJmODE2NTMyZTQ0RTkyREZDOTAiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY5MDk3NjUwMjE4MiwibmFtZSI6IlNBS1NIQU0tREVNTy1LRVktMSJ9.0rB6mr03uK0Q7Bjf21-YySJMHmcCcqFHQ1zyKIusWX0"; // Replace with your actual API key
+
+        // Log the values to the console
+        console.log("ipfs User ID:", ipfsdata.uid);
+        console.log("ipfs User Name:", ipfsdata.name);
+        console.log("ipfs User Email:", ipfsdata.email);
+
+        // Replace './cert/eom.jpg' with the actual image path you want to upload
+        const imagePath = ipfsdata.imageDataURL;
+
+        console.log("ipfs new Image path:", imagePath);
+
+        // // Convert image to Blob
+        fetch(imagePath)
+          .then((response) => response.blob())
+          .then((blob) => {
+            // Create a FormData object to send the file to NFT.Storage
+            const formData = new FormData();
+            formData.append("file", blob);
+
+            // Perform the upload to NFT.Storage
+            fetch("https://api.nft.storage/upload", {
+              method: "POST",
+              headers: {
+                Authorization: "Bearer " + apiKey,
+              },
+              body: formData,
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                const ipfsHash = data.value.cid; // Extract CID from the response
+                console.log(ipfsHash);
+
+                // Construct IPFS URL
+                // const ipfsAssetURL = `https://ipfs.io/ipfs/${ipfsHash}/blob`;
+                const ipfsAssetURL = `https://gateway.pinata.cloud/ipfs/${ipfsHash}/blob`;
+                console.log(ipfsAssetURL);
+
+                // Create a JavaScript object with the collected values and uploaded time
+                var formData = {
+                  userId: ipfsdata.uid,
+                  username: ipfsdata.name,
+                  userEmail: ipfsdata.email,
+                  uploadedTime: new Date().toISOString(),
+                  ipfshash: ipfsHash,
+                  asseturl: ipfsAssetURL,
+                  issuer: "saksham",
+                };
+                console.log("formdata:-", formData);
+
+                // You can call your mintNFT function here with the formData
+                const mintdata = mintNFT(formData);
+                console.log(mintdata);
+              })
+              .catch((error) =>
+                console.error("Error uploading to IPFS:", error)
+              );
+          })
+          .catch((error) => console.error("Error fetching image:", error));
+      }
+
+      async function mintNFT(formData) {
+        try {
+          console.log("mint form data", formData);
+          // Access form data using get method of FormData
+          const tokenuri = formData.ipfshash;
+          const ImageUrl = formData.asseturl;
+          const Issuer = formData.issuer;
+          const userid = formData.userId;
+          const Username = formData.username;
+          const UserEmail = formData.userEmail;
+          // const publickey = '0x083dA9DE13e5BB59823BF2fF0Ec53B410Cf9857a';
+          const publickey = metakey;
+          const ipfslink = "ipfs://" + tokenuri;
+          console.log("tokenuri", ipfslink);
+          console.log("asset url", ImageUrl);
+          console.log("userid:", userid);
+          console.log("issuer", Issuer);
+          console.log("username", Username);
+          console.log("public key", publickey);
+          console.log("user mail address", UserEmail);
+
+          console.log("MINT NFT API is calling");
+          const response = await fetch("http://13.50.171.152:3000/mintNFT", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              ipfslink,
+              ImageUrl,
+              Issuer,
+              userid,
+              Username,
+              publickey,
+              UserEmail,
+              // Add other required parameters
+            }),
+          });
+
+          if (!response.ok) {
+            const errorMessage = await response.text();
+            throw new Error(`Failed to mint NFT: ${errorMessage}`);
+          }
+
+          const responseData = await response.json();
+          console.log("API Response:", responseData);
+
+          // Display the response in your UI, for example:
+          alert(
+            "API call successful. Response: " + JSON.stringify(responseData)
+          );
+        } catch (error) {
+          // Handle errors, such as displaying error messages to the user
+          console.error("Error calling API:", error);
+        }
+      }
+    </script>
+  </body>
+</html>

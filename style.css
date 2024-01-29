@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .mbody{
+    display: flex;
+  }
+  .container {
+    width: 800px;
+    height: 650px;
+    border: 1px solid #0e0d0d;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ddd;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .signature {
+    width: 200px;
+    margin-top: 50px;
+  }
+  
+  .share {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 50px;
+  }
+
+  /* css for profile section  */
+  
+  #view-all-credentials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-left: 80px;
+  }
+  
+  .credential {
+    background-color: #fff;
+    border: 1px solid #000000;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ddd;
+    height: 500px;
+    width: 350px;
+  }
+  
+  .detail {
+    text-align: left;
+  }
+
+  .logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .user-info {
+    text-align: left;
+  }
+  .user-info a{
+    margin-left: 130px;
+    color: #999;
+    text-decoration: none;
+  }
+  
+  .user-info h2 {
+    font-size: 36px;
+    margin-bottom: 5px;
+    margin-left: 50px;
+  }
+  
+  .user-info h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: black;
+    margin-left: 130px;
+    margin-top: -30px;
+  }
+ .verification-info{
+    text-align: center;
+ }
+
+ .verification-info a{
+    display: inline-block;
+    padding: 15px 20px; /* Adjust the padding as needed */
+    text-decoration: none;
+    background-color: #588df1; /* Set the background color */
+    color: #fff; /* Set the text color */
+    border: 1px solid #588df1; /* Set the border color */
+    border-radius: 20px; /* Optional: Add rounded corners */
+    transition: background-color 0.3s, color 0.3s;
+    
+ }
+
+.issued-info p{
+    font-size: 16px;
+    color: #999;
+}
+  
+  .issued-info h3 {
+    font-size: 20px;
+   
+  }
+  
+  .verification-info p.expired {
+    color: #f00;
+    font-weight: bold;
+  }
+  
+
+  /* this is for description detail */
+
+  .container1 {
+    display: flex;
+  }
+  .top-section{
+    box-shadow: 0 5px 20px #a39e9e;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    height: 250px;
+    width: 300px;
+    margin-left: 50px;
+    background-color: #dbe4f7;
+  }
+  
+  .bottom-section {
+    box-shadow: 0 5px 20px #a39e9e;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 350px;
+    width: 700px;
+    margin-left: 100px;
+  }
+  .bottom-section .left-side h5{
+    color:#7384a5;
+    margin-left: 30px;
+  }
+  .bottom-section .left-side p{
+    margin-left: 30px;
+  }
+ 
+  .description img{
+    height: 40px;
+    width: 60px;
+    margin-left: 20px;
+  }
+  .description h3{
+    text-align: center;
+    margin-top: -40px;
+    margin-left: 50px;
+  }
+  .description h3 span{
+    color:purple;
+  }
+  
+  .description a {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .achievement-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .sharelink{
+    display: flex;
+  }
+
+  .share-options{
+    display: flex;
+  }
+  .share-options li{
+    display: flex;
+    text-decoration: none;
+    height: 50px;
+    width: 50px;  
+  }
+.description1 a{
+  font-size: 15px;
+  color:black;
+}
+  
+  
+  
+  
